@@ -1,0 +1,166 @@
+body {
+    background-color: rgb(25, 25, 25);
+    margin: 0;
+    height: 100vh;
+  }
+
+  .head-container{
+    display: flex;
+    height: 10%;
+    width: 100%;
+    background-color: rgb(25, 25, 25);
+  }
+
+  .head-element{
+    font-family: 'Crimson Text', regular;
+    color: white;
+    font-size: 4vw;
+  }
+  
+  .home-button{
+    letter-spacing: -10px;
+  }
+
+ 
+  .line {
+    height: 2px;
+    background-color: white;
+    position: fixed;
+  }
+
+  .first-white-line {
+    width: 20%;
+    top: 80%;
+    left: 0;
+  }
+
+  .second-white-line {
+    width: 19%;
+    transform-origin: left;
+    transform: rotate(-70deg);
+  }
+
+  .third-white-line {
+    width: 19%;
+    transform-origin: left;
+    transform: rotate(70deg);
+  }
+  
+  .fourth-white-line {
+    width: 5%;
+    top: 80%;
+    left: 33%;
+  }
+
+  .fifth-white-line {
+    width: 33%;
+    transform-origin: left;
+    transform: rotate(-70deg);
+  }
+
+  .sixth-white-line {
+    width: 33%;
+    transform-origin: left;
+    transform: rotate(70deg);
+  }
+  
+  .seventh-white-line {
+    width: 5%;
+    top: 80%;
+    left: 60.5%; 
+  }
+
+  .eight-white-line {
+    width: 20%;
+    transform-origin: left;
+    transform: rotate(-70deg);
+  }
+
+  .ninth-white-line {
+    width: 20%;
+    transform-origin: left;
+    transform: rotate(70deg);
+  }
+
+  .tenth-white-line{
+    width: 25%;
+    top: 80%;
+    left: 79.1%; 
+  }
+
+  .info-button{
+    position: absolute;
+    width: 15px;            
+    height: 15px;           
+    background-color: white;  
+    border-radius: 50%;   
+    opacity: 0;   
+  }
+
+  .info-button:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+  .lower-text-container {
+    position: absolute;
+    height: 10vh;
+    width: 20vw;
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .lower-hint{
+    position: absolute;
+    font-family: 'Crimson Text', regular;
+    color: gray;
+    font-size: 1.5vw;
+  }
+
+ 
+  #first-text, #second-text, #third-text {
+    font-family: 'Crimson Text', regular;
+    font-size: 2vw;
+    color: transparent;
+    -webkit-text-stroke: 3px transparent;
+    position: relative;
+  }
+
+  #first-text::before, #second-text::before, #third-text::before {
+    content: "About Me";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    color: white;
+    border-right: 8px solid transparent;
+    transition: 1s ease-in-out;
+  }
+
+
+  #first-text.hover-animation::before, 
+  #second-text.hover-animation::before, 
+  #third-text.hover-animation::before {
+    width: 16vw; 
+    filter: drop-shadow(0 0 25px white);
+  }
+
+  #second-text::before {
+    content: "Resume";
+  }
+
+  #third-text::before {
+    content: "Portfolio";
+  }
+
+
+
+  @media (max-width: 1200px){
+    .home-button{
+      letter-spacing: 0px;
+    }
+
+  }
