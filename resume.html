@@ -5,22 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mason Offutt Resume</title>
     <link rel="stylesheet" href="CSS Files/style_resume.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <div class="head-container">
         <a href="index.html" class="home-button head-element">MVO</a>
     </div>
-    <div class="text-items-container">
-      <a href="about_me.html" class="text-item head-element">About Me</a>
-      <a href="portfolio.html" class="text-item head-element">Portfolio</a>
-      <div class="text-item head-element dropdown">
-        More
-        <div class="dropdown-content">
-            <a href="https://www.linkedin.com/in/mason-o-14534b294/">LinkedIn</a>
-            <a href="https://github.com/masonvoff">Github</a>
+
+    <!-- Toggle button for mobile dropdown -->
+    <div class="menu-toggle">+</div>
+    
+    <div class="text-items-container hidden">
+        <a href="about_me.html" class="text-item head-element">About Me</a>
+        <a href="portfolio.html" class="text-item head-element">Portfolio</a>
+        <div class="text-item head-element dropdown">
+            More
+            <div class="dropdown-content">
+                <a href="https://www.linkedin.com/in/mason-o-14534b294/">LinkedIn</a>
+                <a href="https://github.com/masonvoff">Github</a>
+            </div>
         </div>
     </div>
-  </div>
+
+    <!-- JavaScript to handle dropdown toggle -->
+    <script>
+        
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            const menu = document.querySelector('.text-items-container');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+
     
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
 

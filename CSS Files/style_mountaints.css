@@ -14,7 +14,7 @@ body {
   .head-element{
     font-family: 'Crimson Text', regular;
     color: white;
-    font-size: 4vw;
+    font-size: 70px;
   }
   
   .home-button{
@@ -104,7 +104,7 @@ body {
   .lower-text-container {
     position: absolute;
     height: 10vh;
-    width: 20vw;
+    width: 100vw;
     bottom: 0; 
     left: 50%; 
     transform: translateX(-50%); 
@@ -117,7 +117,7 @@ body {
     position: absolute;
     font-family: 'Crimson Text', regular;
     color: gray;
-    font-size: 1.5vw;
+    font-size: 30px;
   }
 
  
@@ -159,8 +159,12 @@ body {
 
 
   @media (max-width: 1200px){
-    .home-button{
-      letter-spacing: 0px;
+    .head-element{
+      font-size: 35px;
+      letter-spacing: -1px;
+    }
+    .lower-hint{
+      font-size: 15px;
     }
 
   }

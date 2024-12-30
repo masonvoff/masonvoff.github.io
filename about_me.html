@@ -15,17 +15,33 @@
     <div class="head-container">
         <a href="index.html" class="home-button head-element">MVO</a>
     </div>
-    <div class="text-items-container">
-      <a href="resume.html" class="text-item head-element">Resume</a>
+    <div class="head-container">
+      <a href="index.html" class="home-button head-element">MVO</a>
+  </div>
+
+  <!-- Toggle button for mobile dropdown -->
+  <div class="menu-toggle">+</div>
+  
+  <div class="text-items-container hidden">
+      <a href="about_me.html" class="text-item head-element">About Me</a>
       <a href="portfolio.html" class="text-item head-element">Portfolio</a>
       <div class="text-item head-element dropdown">
-        More
-        <div class="dropdown-content">
-            <a href="https://www.linkedin.com/in/mason-o-14534b294/">LinkedIn</a>
-            <a href="https://github.com/masonvoff">Github</a>
-        </div>
-    </div>
+          More
+          <div class="dropdown-content">
+              <a href="https://www.linkedin.com/in/mason-o-14534b294/">LinkedIn</a>
+              <a href="https://github.com/masonvoff">Github</a>
+          </div>
+      </div>
   </div>
+
+  <!-- JavaScript to handle dropdown toggle -->
+  <script>
+      
+      document.querySelector('.menu-toggle').addEventListener('click', () => {
+          const menu = document.querySelector('.text-items-container');
+          menu.classList.toggle('hidden');
+      });
+  </script>
   <h2 class="intro-text">Learn a little about me below</h2>
   <div id="tile_container_1"  class="tile-container">
     <button id="leftArrow" class="arrow-button" style="left: 10px;">&#9664;</button>
@@ -63,7 +79,7 @@
             </h4>
           </div>
           <div class="child">
-            <img src="Pictures/disney castle.jpg" alt="Disney castle" />
+            <img src="Pictures/Disney castle.jpg" alt="Disney castle" />
             <h4>This is a photo of me and my girlfriend at Disney World for the 50th anniversary.</h4>
           </div>
           <div class="child">

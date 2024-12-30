@@ -13,19 +13,33 @@
 <body>
     <div class="blur-overlay"></div>
     <div class="head-container">
-        <a href="index.html" class="home-button head-element">MVO</a>
-    </div>
-    <div class="text-items-container">
-      <a href="resume.html" class="text-item head-element">Resume</a>
-      <a href="about_me.html" class="text-item head-element">About Me</a>
-      <div class="text-item head-element dropdown">
+      <a href="index.html" class="home-button head-element">MVO</a>
+  </div>
+  <div class="head-container">
+    <a href="index.html" class="home-button head-element">MVO</a>
+</div>
+
+<!-- Toggle button for mobile dropdown -->
+<div class="menu-toggle">+</div>
+
+<div class="text-items-container hidden">
+    <a href="about_me.html" class="text-item head-element">About Me</a>
+    <a href="resume.html" class="text-item head-element">Resume</a>
+    <div class="text-item head-element dropdown">
         More
         <div class="dropdown-content">
             <a href="https://www.linkedin.com/in/mason-o-14534b294/">LinkedIn</a>
             <a href="https://github.com/masonvoff">Github</a>
         </div>
     </div>
-  </div>
+</div>
+<script>
+      
+  document.querySelector('.menu-toggle').addEventListener('click', () => {
+      const menu = document.querySelector('.text-items-container');
+      menu.classList.toggle('hidden');
+  });
+</script>
   <div class="container">
     <p class="container-title">Here are the projects<br>I'm most proud of</p>
   

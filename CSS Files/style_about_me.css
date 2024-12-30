@@ -91,7 +91,7 @@ body {
   display: flex;
   position: fixed; 
   top: 0; 
-  height: 8%;
+  height: 75px;
   width: 50%;
   background-color: rgb(25, 25, 25);
   z-index: 1000; 
@@ -100,7 +100,7 @@ body {
 .head-element {
   font-family: 'Crimson Text', regular;
   color: white;
-  font-size: 4vw;
+  font-size: 70px;
   transform: translateY(-1vh);
 }
 
@@ -112,7 +112,7 @@ body {
   display: flex;
   position: fixed; 
   top: 0; 
-  height: 8%;
+  height: 75px;
   width: 50%;
   background-color: rgb(25, 25, 25);
   z-index: 1000; 
@@ -123,7 +123,7 @@ body {
 .text-item{
   font-family: 'Crimson Text', regular;
   color: gray;
-  font-size: 2vw;
+  font-size: 40px;
   text-decoration: none;
   transform: translateY(1vh);
 }
@@ -203,7 +203,6 @@ transform: translateX(-50%) translateY(-10px);
   background-size: 500% 500%; 
 }
 
-/* Rotate the gradient colors */
 @keyframes rotateColors {
   0% {
       background-position: 0% 50%;
@@ -269,8 +268,9 @@ transform: translateX(-50%) translateY(-10px);
 
 .child {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
   min-width: 60vw;
   height: 80%;
   border-radius: 16px;
@@ -281,6 +281,8 @@ transform: translateX(-50%) translateY(-10px);
   color: white;
   animation: changeColors 5s step-end infinite, rotateColors 5s ease-out infinite alternate;
   background-size: 500% 500%;
+  gap: 20px; 
+  position: relative;
 }
 
 /* Rotate the gradient colors */
@@ -296,23 +298,24 @@ transform: translateX(-50%) translateY(-10px);
 /* Change the gradient colors */
 @keyframes changeColors {
   0%, 100% {
-    background-image: linear-gradient(90deg, black, #000026); /* First color set */
+    background-image: linear-gradient(90deg, black, #000026); 
   }
 }
-.child img{
-  position: absolute;
-  margin-top: -200px;
+.child img {
+  position: relative; 
+  margin-top: 0; 
+  max-height: 40vh; 
   width: auto;
   height: auto; 
-  max-height: 40vh; 
-  object-fit: cover; 
-  object-position: center; 
+  object-fit: cover;
+  object-position: center;
   border-radius: 16px;
 }
 
-.child h4{
-  margin-top: 300px;
+.child h4 {
+  margin-top: 0;
   max-width: 60%;
+  text-align: center;
 }
 
 .scroll-images::-webkit-scrollbar {
@@ -334,9 +337,10 @@ button {
 }
 
 .additional-text-container {
-  margin: 0;
+  margin: 10px;
   padding: 50px;
-  max-width: 800px;
+  min-width: 350px;
+  max-width: 1200px;
   font-family: 'Crimson Text', serif;
   color: white;
   background-color: rgba(0, 0, 0, 0.8); 
@@ -378,4 +382,60 @@ button {
   height: 100%;
   z-index: -1; 
   pointer-events: none; 
+}
+
+@media screen and (max-width: 800px) {
+  .text-items-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; 
+    flex-direction: column; 
+    justify-content: start;
+    align-items: center;
+    overflow: hidden; 
+}
+
+  .text-item {
+      top: 50%;
+      font-size: 30px; 
+      margin: 25px 0; 
+  }
+
+ 
+  .text-items-container.hidden {
+      height: 0;
+      padding: 0;
+  }
+
+ 
+  .menu-toggle {
+      display: block;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: rgb(25, 25, 25);
+      color: gray;
+      font-size: 35px;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+  }
+  .head-container{
+    width: 100%;
+    height: 75px;
+  }
+  .head-element{
+    font-size: 35px;
+    letter-spacing: 0px;
+    transform: translateY(15px);
+  }
+
+  .child img{
+    max-width: 20vh;
+  }
+  .child h4{
+    font-size: 12px;
+  }
 }
